@@ -57,3 +57,12 @@ ARG STACK_ARGS="--resolver=${STACK_RESOLVER}"
 # OR
 # $ stack --skip-ghc-check --system-ghc --resolver=lts-13 build  --ghc-options '-fPIC -optl -static' 
 
+
+RUN : "pre-build a few packages" \
+  stack --skip-ghc-check --system-ghc --resolver=lts-13 build  --ghc-options '-fPIC -optl -static' \
+    cabal-install \
+    cryptonite \
+    mtl \
+    shelly \
+    unix
+
