@@ -14,7 +14,8 @@ RUN \
         gmp-dev \
         sudo \
         xz \
-        zlib-dev
+        zlib-dev \
+        zlib-static
 
 #RUN echo '@testing http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories
 #
